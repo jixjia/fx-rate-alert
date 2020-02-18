@@ -22,6 +22,9 @@ sms_template = '[{}] {} >> Time to {} {} ({})'
 
 # Main program
 for currency in config.TO_CURRENCY_LIST:
+    
+    current_dt = datetime.datetime.now().strftime("%d/%b/%Y %H:%M:%S")
+    
     # Make GET request to target URL
     r = requests.get(config.BASE_URL.format(config.BASE_CURRENCY, currency))
     soup = BeautifulSoup(r.text, 'html.parser')
@@ -33,10 +36,9 @@ for currency in config.TO_CURRENCY_LIST:
     fx_pair_inverse = currency + '/' + config.BASE_CURRENCY
     fx_rate_inverse = round(1 / fx_rate, 4)
 
-    print("{}: {} ({}: {})".format(
-        fx_pair, fx_rate, fx_pair_inverse, fx_rate_inverse))
+    print("{} [{}] {} ({}: {})".format(
+        current_dt, fx_pair, fx_rate, fx_pair_inverse, fx_rate_inverse))
 
-    current_dt = datetime.datetime.now().strftime("%d/%b/%Y %H:%M:%S")
     for thres in config.ALERT_THRESHOLD:
         if fx_pair == thres['fx_pair'] and fx_rate >= thres['sell-threshold']:
             sms.send(config.TO, sms_template.format(
