@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 import requests
 import config
 import datetime
+import logging
 from modules import SMSNotification
 
 # Initiate SMS Notification
@@ -38,6 +39,9 @@ for currency in config.TO_CURRENCY_LIST:
 
     print("{} [{}] {} ({}: {})".format(
         current_dt, fx_pair, fx_rate, fx_pair_inverse, fx_rate_inverse))
+    
+    logging.info("{} [{}] {} ({}: {})".format(current_dt, fx_pair,
+                                                  fx_rate, fx_pair_inverse, fx_rate_inverse))
 
     for thres in config.ALERT_THRESHOLD:
         if fx_pair == thres['fx_pair'] and fx_rate >= thres['sell-threshold']:
