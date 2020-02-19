@@ -3,7 +3,7 @@
 A Python program that automatically collects exchange rate fors desired currency pairs.    
 The program uses Twilio API to send SMS when the monitor rates exceed preset threshold (aka. real-time FX rate alert)  
 
-<h3> Screenshot</h3>
+### Screenshot
 <p align="center">
   <img src="https://jixjiastorage.blob.core.windows.net/blog-resources/python-serverless-function/complete.gif" width="900">
 </p>
@@ -11,7 +11,7 @@ The program uses Twilio API to send SMS when the monitor rates exceed preset thr
 ### SMS Notification
 
 <p align="center">
-  <img src="https://jixjiastorage.blob.core.windows.net/blog-resources/python-serverless-function/complete.gif" width="900">
+  <img src="https://jixjiastorage.blob.core.windows.net/blog-resources/python-serverless-function/demo.gif" width="500">
 </p>
 
 This app is also part of tutorial demonstrating how to host (any) Python program as a serverless function using the **Azure Functions**.    
