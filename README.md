@@ -5,13 +5,13 @@ The program uses Twilio API to send SMS when the monitor rates exceed preset thr
 
 ### Screenshot
 <p align="center">
-  <img src="https://jixjiastorage.blob.core.windows.net/blog-resources/python-serverless-function/complete.gif" width="900">
+  <img src="https://jixjiadatabricks.blob.core.windows.net/images/demo-half.gif" width="400">
 </p>
 
 ### SMS Notification
 
 <p align="center">
-  <img src="https://jixjiastorage.blob.core.windows.net/blog-resources/python-serverless-function/demo.png" width="500">
+  <img src="https://jixjia.files.wordpress.com/2020/04/demo.png" width="500">
 </p>
 
 This app is also part of tutorial showing how to turn a Python program into serverless function using **Azure Functions**. The function app can be triggered ad-hoc by HTTP request or excuted routinely on a regular schedule using CRON. 
